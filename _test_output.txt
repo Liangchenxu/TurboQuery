@@ -1,0 +1,10 @@
+﻿python : Traceback (most recent call last):
+所在位置 行:1 字符: 24
++ cd d:\tqtq\TurboQuery; python _test_e2e.py 2>&1 | Out-File -FilePath  ...
++                        ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\tqtq\TurboQuery\_test_e2e.py", line 5, in <module>
+    from src.loader import load_directory
+ImportError: cannot import name 'load_directory' from 'src.loader' (D:\tqtq\TurboQuery\src\loader.py)
