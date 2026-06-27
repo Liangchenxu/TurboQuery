@@ -32,7 +32,7 @@ def tokenize(text: str) -> List[str]:
 
     1. Extract all word tokens using the regex ``\\w+`` (Unicode-aware).
     2. Convert every token to lowercase.
-    3. Discard tokens whose length is 2 characters or fewer.
+    3. Discard tokens whose length is 1 character or fewer (keeps 2-char Chinese names).
     4. Remove tokens that appear in the 50-word English stop list.
 
     Args:
@@ -59,7 +59,7 @@ def tokenize(text: str) -> List[str]:
     lowered = [t.lower() for t in raw_tokens]
 
     # Step 3: filter by length > 2.
-    length_filtered = [t for t in lowered if len(t) > 2]
+    length_filtered = [t for t in lowered if len(t) > 1]
 
     # Step 4: remove stop words.
     result = [t for t in length_filtered if t not in _STOP_WORDS]
